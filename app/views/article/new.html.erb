@@ -1,7 +1,7 @@
 <h1>Enter the Book details</h1>
 <br>
 
-<%= form_with namespace: "article", url: url_for(action: 'create', controller: 'article'), method: :post, local: true do |f| %> 
+<%= form_with url: url_for(action: 'create', controller: 'article'), method: :post, local: true do |f| %> 
     <p> 
     <%= f.label :BookName %><br/> 
     <%= f.text_field :bookName %>

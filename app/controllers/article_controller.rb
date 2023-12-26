@@ -22,4 +22,7 @@ class ArticleController < ApplicationController
 
   end
 
+  def message
+    @msg = Message.getMessage
+  end
 end

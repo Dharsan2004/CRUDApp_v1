@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "application#index"
+  root "article#message"
 
   resources :article , only: [:index, :show , :new ,:create]
 
