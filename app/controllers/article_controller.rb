@@ -17,20 +17,17 @@ class ArticleController < ApplicationController
   end
 
   def update
-    book = params[:article][:bookName]
-    author = params[:article][:authorName]
+    book = params[:article][:BookName]
+    author = params[:article][:Author]
     id = params[:id]
-
     @article = Article.find(id)
+
 
     if @article.update(BookName:book,Author:author)
       redirect_to "/article"
     else
       render :edit, status: :unprocessable_entity
     end
-
-
-
   end
 
   def create
@@ -45,6 +42,14 @@ class ArticleController < ApplicationController
     end
 
   end
+
+  def destroy
+    id = params[:id]
+    @article = Article.find(id)
+    @article.destroy
+    redirect_to "/article"
+  end
+
 
   def message
     @msg = Message.getMessage
