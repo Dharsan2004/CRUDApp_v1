@@ -11,4 +11,7 @@
       <p> <%= link_to "Delete" , article_path(article.id) , data:{ turbo_method: :delete } %> </p>
     </li>
   <% end %>
+
 </ul>
+
+<h2> <%= link_to "Create new Post" , new_article_path , data:{ turbo_method: :get } %> </h2>

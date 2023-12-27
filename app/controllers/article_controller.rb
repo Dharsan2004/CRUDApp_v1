@@ -36,7 +36,7 @@ class ArticleController < ApplicationController
     @article = Article.new(BookName:bookName,Author:author)
 
     if @article.save
-        redirect_to article_path(@article) #get req for Show
+        redirect_to "/article"
     else
       render :new, status: :unprocessable_entity
     end
