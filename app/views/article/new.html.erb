@@ -11,11 +11,9 @@
       <li><%= msg %></li> 
     <% end %> 
   </ul>
-<% end %>
+<% end %> 
 
-
-
-<%= form_with url: url_for(action: 'create', controller: 'article'), method: :post, local: true do |f| %> 
+<%= form_with url:"/article", method: :post, local: true do |f| %> 
     <p> 
     <%= f.label :BookName %><br/> 
     <%= f.text_field :bookName %>
